@@ -45,6 +45,10 @@ The binaries are placed in the `target` directory.
 ```
 brew tap spurintel/spurintel
 brew install spurintel/spurintel/spurctx
+
+# updates
+brew update
+brew upgrade spurctx
 ```
 
 ### Using `go install`
