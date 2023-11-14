@@ -21,11 +21,11 @@ Usage of ./target/spurctx:
 
 Here are some example usages:
 
-- Command-line arguments: `./spurctx -ip 192.168.1.1,192.168.1.2`
-- File input: `./spurctx -f ips.txt`
-- Garbage file input (does regex search for ip on each line): `./spurctx -gf ips.txt`
-- Standard input: `echo 1.1.1.1 | ./spurctx`
-- Garbage input: `echo "The IP address is 1.1.1.1." | ./spurctx -g`
+- Command-line arguments: `spurctx -ip 192.168.1.1,192.168.1.2`
+- File input: `spurctx -f ips.txt`
+- Garbage file input (does regex search for ip on each line): `spurctx -gf ips.txt`
+- Standard input: `echo 1.1.1.1 | spurctx`
+- Garbage input: `echo "The IP address is 1.1.1.1." | spurctx -g`
 
 ## Building
 
@@ -44,7 +44,7 @@ The binaries are placed in the `target` directory.
 ### Using Homebrew
 ```
 brew tap spurintel/spurintel
-brew install spurctx
+brew install spurintel/spurintel/spurctx
 ```
 
 ### Using `go install`
@@ -52,7 +52,7 @@ brew install spurctx
 If you have Go installed, you can install `spurctx` directly using `go install`:
 
 ```bash
-go install github.com/spurintel/spurctx@latest
+go install github.com/spurintel/spurctx-cli@latest
 ```
 
 This will install the `spurctx` binary to your `$GOPATH/bin` directory.
