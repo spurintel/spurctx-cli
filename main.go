@@ -23,6 +23,23 @@ func main() {
 	parallelismFlag := flag.Int("n", runtime.NumCPU()*2, "Override the parallelism")
 	flag.Parse()
 
+	// If there are no input flags or stdin, print usage
+	hasStdin := false
+	stat, err := os.Stdin.Stat()
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+
+	if (stat.Size()) > 0 {
+		hasStdin = true
+	}
+
+	if *ipFlag == "" && *fileFlag == "" && !hasStdin && *garbageFileFlag == "" {
+		flag.Usage()
+		os.Exit(1)
+	}
+
 	token := os.Getenv("SPUR_TOKEN")
 	if token == "" {
 		fmt.Println("SPUR_TOKEN environment variable is not set")
