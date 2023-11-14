@@ -55,7 +55,7 @@ If you have Go installed, you can install `spurctx` directly using `go install`:
 go install github.com/spurintel/spurctx-cli@latest
 ```
 
-This will install the `spurctx` binary to your `$GOPATH/bin` directory.
+This will install the `spurctx-cli` binary to your `$GOPATH/bin` directory.
 
 ### Downloading the Binary
 
