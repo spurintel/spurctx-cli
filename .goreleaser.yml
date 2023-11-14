@@ -22,6 +22,8 @@ brews:
   -
     name: spurctx
     homepage: "https://github.com/spurintel/spurctx-cli"
+    install: 
+      bin.install "spurctx"
     repository:
       owner: spurintel
       name: homebrew-spurintel
