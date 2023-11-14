@@ -14,6 +14,7 @@ builds:
 
 release:
   prerelease: auto
+  name_template: 'spurctx_{{.Tag}}_{{.Os}}_{{.Arch}}'
 
 universal_binaries:
   - replace: true
